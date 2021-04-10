@@ -8,10 +8,11 @@ https://data.cityofnewyork.us/Environment/2018-Central-Park-Squirrel-Census-Squi
 Inspiration:
 https://www.thesquirrelcensus.com/
 
-Cleaning Data and loading into db: Kristy
-Flask: Hope
-JS Visualization: Keri
-CSS/HTML: Pamela
+Responsibilities:
+* Cleaning Data and loading into db: Kristy
+* Flask: Hope
+* JS Visualization: Keri
+* CSS/HTML: Pamela
 Note: as tasks are finished, others will float to help.
 
 Extra JS Library: TBA
