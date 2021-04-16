@@ -1,3 +1,5 @@
+from flask_cors import CORS 
+
 from config import user
 from config import password
 import numpy as np
@@ -39,7 +41,7 @@ for select_table in select_tables:
 Flask Setup
 """
 app = Flask(__name__)
-
+CORS(app) 
 
 """
 Flask Routes
