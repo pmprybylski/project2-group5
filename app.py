@@ -3,7 +3,7 @@ from flask_cors import CORS
 import numpy as np
 
 import psycopg2 
-from config.config import *
+from config import *
 
 import sqlalchemy
 from sqlalchemy.ext.automap import automap_base
@@ -67,11 +67,11 @@ def location():
     location_list = []
     for row in location:
         dict3 = {}
-        dict3["lat"] = row[0]
-        dict3["lng"] = row[1] 
+        dict3["lng"] = row[0]
+        dict3["lat"] = row[1] 
         dict3["unique_squirrel_id"] = row[2] 
         dict3["date"] = row[3]
-        dict3["lat_lng"] = row[4]
+        dict3["lng_lat"] = row[4]
         location_list.append(dict3)
     
     """
@@ -88,13 +88,13 @@ def map_location():
     map_location_list = []
     for row in map_location:
         dict4 = {}
-        dict4["lat"] = row[0]
-        dict4["lng"] = row[1] 
+        dict4["lng"] = row[0]
+        dict4["lat"] = row[1] 
         dict4["unique_squirrel_id"] = row[2] 
         dict4["date"] = row[3]
         dict4["hectare"] = row[4]
         dict4["hectare_squirrel_no"] = row[5]
-        dict4["lat_lng"] = row[6]
+        dict4["lng_lat"] = row[6]
         map_location_list.append(dict4)
 
     """
@@ -111,14 +111,14 @@ def friendly():
     friendly_list = []
     for row in friendly:
         dict2 = {}
-        dict2["lat"] = row[0]
-        dict2["lng"] = row[1] 
+        dict2["lng"] = row[0]
+        dict2["lat"] = row[1] 
         dict2["unique_squirrel_id"] = row[2] 
         dict2["date"] = row[3]
         dict2["approaches"] = row[4]
         dict2["indifferent"] = row[5]
         dict2["runs_from"] = row[6]
-        dict2["lat_lng"] = row[7]
+        dict2["lng_lat"] = row[7]
         friendly_list.append(dict2)
 
     """
@@ -151,7 +151,7 @@ def colors():
         dict1["indifferent"] = row[13]
         dict1["runs_from"] = row[14]        
         dict1["other_interactions"] = row[15]
-        dict1["lat_lng"] = row[16]
+        dict1["lng_lat"] = row[16]
         demo_list.append(dict1)
 
     """
