@@ -7,9 +7,26 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>Squirrels of Central Park</title>
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin=""/>
         <link href="static/css/styles.css" rel="stylesheet" />
-        <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js" crossorigin="anonymous"></script>
+        <!-- Scripts -->
+        <!-- Leaflet JS -->
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
+        <!-- API Key for Map -->
+        <script type="text/javascript" src="static/js/config.js"></script>
+        <!-- Chart.js -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <!-- D3 -->
+        <script src="https://d3js.org/d3.v6.min.js"></script>
+        <!-- Plotly -->
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+
     </head>
     <body class="sb-nav-fixed">
         <!-- Navbar Content -->
@@ -37,7 +54,7 @@
                             <a class="nav-link" href="https://twitter.com/SquirrelCensus">
                                 <div class="sb-nav-link-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
                                     <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
-                                  </svg></div>
+                                </svg></div>
                                 Squirrel Census
                             </a>
                             <a class="nav-link" href="https://www.instagram.com/squirrelcensus/">
@@ -59,21 +76,30 @@
                     <div class="container-fluid">
                         <h1 class="mt-4">Squirrel Sightings</h1>
                         <ol class="breadcrumb mb-4">
-                            <li class="breadcrumb-item active">Insert Dropdown Box Here</li>
+                            <!-- Dropdown Box with Squirrel ID -->
+                            <li class="breadcrumb-item active">Select A Squirrel</li>
+                            <li class="breadcrumb-item">
+                                <select id="selDataset" class="breadcrumb-item active">
+                                    <option></option>
+                                </select>
+                            </li>       
                         </ol>
                         <div class="row">
                             <div class="col-xl-4 col-md-4">
                                 <div class="card bg-primary text-white mb-4">
-                                    <div class="card-body">Demographics Box</div>
+                                    <div id = "demographicsbox" class="card-body">Get Ready For Some Details</div>
                                 </div>
                             </div>
-                            <div class="col-xl-8">
-                                <div class="card mb-4">
+                            <!-- Map -->
+                            <div class="col-xl-8 col-md-8">
+                                <div class="card mb-8">
                                     <div class="card-header">
-                                        <i class="fas fa-chart-area mr-1"></i>
-                                        Sightings Map
+                                        Central Park, New York, NY
                                     </div>
-                                    <div class="card-body"><canvas id="myAreaChart" width="100%" height="40"></canvas></div>
+                                    <div class="card-body">
+                                        <div id="parkmap" class="img-fluid" style="height:600px; width: 1700px; object-fit: contain;"> 
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -81,70 +107,39 @@
                             <div class="col-xl-6">
                                 <div class="card mb-4">
                                     <div class="card-header">
-                                        <i class="fas fa-chart-area mr-1"></i>
-                                        Color Markings Chart
+                                        <i class="mr-1"></i>
+                                        Squirrels by Primary Fur Color
                                     </div>
-                                    <div class="card-body"><canvas id="myAreaChart" width="100%" height="40"></canvas></div>
+                                    <div class="card-body"><canvas id="colorMarkingsChart" width="100%" height="40"></canvas></div>
                                 </div>
                             </div>
                             <div class="col-xl-6">
                                 <div class="card mb-4">
                                     <div class="card-header">
                                         <i class="fas fa-chart-bar mr-1"></i>
-                                        Friendliness Chart
+                                        Squirrel Behavior
                                     </div>
-                                    <div class="card-body"><canvas id="myBarChart" width="100%" height="40"></canvas></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card mb-4">
-                            <div class="card-header">
-                                <i class="fas fa-table mr-1"></i>
-                                DataTable Example
-                            </div>
-                            <div class="card-body">
-                                <div class="table-responsive">
-                                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                        <thead>
-                                            <tr>
-                                                <th>Name</th>
-                                                <th>Position</th>
-                                                <th>Office</th>
-                                                <th>Age</th>
-                                                <th>Start date</th>
-                                                <th>Salary</th>
-                                            </tr>
-                                        </thead>
-                                        <tfoot>
-                                            <tr>
-                                                <th>Name</th>
-                                                <th>Position</th>
-                                                <th>Office</th>
-                                                <th>Age</th>
-                                                <th>Start date</th>
-                                                <th>Salary</th>
-                                            </tr>
-                                        </tfoot>
-                                        <tbody>
-                                            <tr>
-                                                <td>Tiger Nixon</td>
-                                                <td>System Architect</td>
-                                                <td>Edinburgh</td>
-                                                <td>61</td>
-                                                <td>2011/04/25</td>
-                                                <td>$320,800</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                    <div class="card-body">
+                                        <!-- barchart code -->
+                                        <div id="barchart"></div>
+                                        <!-- Dropdown options -->
+                                        <select id="selDemographics">
+                                            <option value="squirrelBehavior">Total Squirrel Behavior</option>
+                                            <option value="juvenileBehavior">Juvenile Squirrel Behavior</option>
+                                            <option value="adultBehavior">Adult Squirrel Behavior</option>
+                                            <option value="amBehavior">AM Squirrel Behavior</option>
+                                            <option value="pmBehavior">PM Squirrel Behavior</option>
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </main>
-                <footer class="py-4 bg-light mt-auto">
+                <footer class="py-4 mt-auto">
                     <div class="container-fluid">
                         <div class="d-flex align-items-center justify-content-between small">
-                            <div class="text-muted">Copyright &copy; Your Website 2020</div>
+                            <div class="text-muted">Copyright &copy; 2021</div>
                             <div>
                                 <a href="https://icons8.com/icon/95006/squirrel">Squirrel icon by Icons8</a>
                                 &middot;
@@ -155,14 +150,8 @@
                 </footer>
             </div>
         </div>
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-        <script src="static/js/scripts.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
-        <script src="assets/demo/chart-area-demo.js"></script>
-        <script src="assets/demo/chart-bar-demo.js"></script>
-        <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
-        <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
-        <script src="assets/demo/datatables-demo.js"></script>
+
+        <script src="static/js/charts.js"></script>
+
     </body>
 </html>

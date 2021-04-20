@@ -27,12 +27,12 @@ d3.json("http://127.0.0.1:5000/plot_squirrel_colors").then((data) => {
         yJuvenile.push(jBehavior.length)
     })
     console.log(yJuvenile)
-     // adult data
-     var yAdult = []
-     filteredData.forEach((ds) => {
-         aBehavior = ds.filter(j => j.age === "Adult")
-         yAdult.push(aBehavior.length)
-     })
+    // adult data
+    var yAdult = []
+    filteredData.forEach((ds) => {
+        aBehavior = ds.filter(j => j.age === "Adult")
+        yAdult.push(aBehavior.length)
+    })
 
     // AM data
     var yAM = []
@@ -56,8 +56,7 @@ d3.json("http://127.0.0.1:5000/plot_squirrel_colors").then((data) => {
             x: xBehavior,
             y: yBehavior,
             type: "bar"
-        }]
-         
+        }]     
         Plotly.newPlot("barchart", data)
     }
 

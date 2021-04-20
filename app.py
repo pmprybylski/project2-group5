@@ -1,10 +1,9 @@
 from flask_cors import CORS 
 
-from config import user
-from config import password
 import numpy as np
 
 import psycopg2 
+from config.config import *
 
 import sqlalchemy
 from sqlalchemy.ext.automap import automap_base
@@ -18,7 +17,9 @@ from flask import Flask, jsonify
 """
 Database Setup
 """
-conn = psycopg2.connect("dbname=squirrel_census user={user} password={password}")
+
+conn_string = f"host=localhost dbname={dbname} user={user} password={password}"
+conn = psycopg2.connect(conn_string)
 
 cursor = conn.cursor()
 
@@ -134,8 +135,8 @@ def colors():
     demo_list = []
     for row in squirrel_color:
         dict1 = {}
-        dict1["lat"] = row[0]
-        dict1["lng"] = row[1]
+        dict1["lng"] = row[0]
+        dict1["lat"] = row[1]
         dict1["unique_squirrel_id"] = row[2] 
         dict1["hectare"] = row[3]
         dict1["shift"] = row[4]
