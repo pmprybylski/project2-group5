@@ -28,6 +28,7 @@ Extra JS Library: TBA
 Requirements:
   1. Download and install PostgreSQL, create a database ''squirrel_census' (retain database username and password for later step)
   2. Obtain an API Key for Mapbox (https://docs.mylistingtheme.com/article/how-to-generate-a-mapbox-api-key/)
+  
 Steps to launch:
   1. Use squirrel_census_dataframes.ipynb to convert data from csv to database tables inserted in to the squirells_census PostgreSQL database<br>
   2. Use Visual Studio Code: <br>
