@@ -28,7 +28,6 @@ Extra JS Library: TBA
 Requirements:
   1. Download and install PostgreSQL, create a database ''squirrel_census' (retain database username and password for later step)
   2. Obtain an API Key for Mapbox (https://docs.mylistingtheme.com/article/how-to-generate-a-mapbox-api-key/)
-
 Steps to launch:
   1. Use Jupyter Notebook, ipynb file, to convert data from csv to database tables inserted in to the squirells_census PostgreSQL database
   2. Use Visual Studio Code: <br>
@@ -37,7 +36,6 @@ Steps to launch:
         c. Run flask app in app.py to start local server <br>
         d. Use python -m http.server to open the project in an Integrated Terminal <br>
    3. Open http://localhost:8000/ to view the website
- 
 Page Features:
   1. Selecting a squirrel from the dropdown list populates detailed information about that squirrel and marks the map with the site where the squirrel was spotted
   2. Donut chart features a breakdown of primary fur color types
