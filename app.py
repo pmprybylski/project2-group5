@@ -29,7 +29,7 @@ select_tables = [
     "select * from squirrel_loc", 
     "select * from squirrel_map_loc", 
     "select * from squirrel_mod"
-    ]
+]
 
 squirrel_tables = [] 
 for select_table in select_tables:

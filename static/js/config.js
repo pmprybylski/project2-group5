@@ -1,2 +1,2 @@
 // API Key
-const API_KEY = "YOUR API KEY HERE";
+const API_KEY = "YOUR OPENMAPS API KEY HERE";

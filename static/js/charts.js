@@ -1,3 +1,25 @@
+// SQUIRREL RANDOM FACT
+var factPlaceholder = document.getElementById("squirrel-fact");
+var showFact = document.getElementById("show-fact");
+var factsList = [
+      "In Greek, the word squirrel means 'shadow tail.'",
+      "With 285 species of squirrels, they can be found in every continent except Antarctica and Australia.",
+      "The hind legs of squirrels are double-jointed, which gives them the ability to run up and trees very quickly.",
+      "Squirrels can fall from 30 meters high, without hurting themselves.",
+      "A squirrel's eyes are positioned in a way that allows them to see behind them.",
+      "Trees like chestnut, pine, beech, hazel and oak trees rely on squirrels to help them propigate.",
+      "Squirrels can find food buried beneath a foot of snow.",
+      "Squirrels may lose 25% of their buried food to thieves."
+];
+var factNumber;
+function randomFact(){
+      return factsList[factNumber];
+}
+showFact.addEventListener('click', function(){
+      factNumber = Math.floor(Math.random()*factsList.length);
+      factPlaceholder.textContent = randomFact();
+});
+
 // DEMOGRAPHICS TABLE & MAP
 //Default Map
 let map =  L.map('parkmap', {
