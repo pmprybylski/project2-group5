@@ -38,7 +38,7 @@ Steps to launch:
         d. Use python -m http.server to open the project in an Integrated Terminal <br>
   3. Open http://localhost:8000/ to view the website
   
-<h5>Page Features</h5>
+<h4>Page Features</h4>
   1. Selecting a squirrel from the dropdown list populates detailed information about that squirrel and marks the map with the site where the squirrel was spotted<br>
   2. Donut chart features a breakdown of primary fur color types<br>
   3. Bar chart compares squirrel based on age group and time of day<br>
