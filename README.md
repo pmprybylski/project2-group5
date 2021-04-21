@@ -35,9 +35,10 @@ Steps to launch:
         b. Add mpabox API key to js/config.js<br>
         c. Run flask app in app.py to start local server <br>
         d. Use python -m http.server to open the project in an Integrated Terminal <br>
-   3. Open http://localhost:8000/ to view the website<br>
+  3. Open http://localhost:8000/ to view the website
+  
 Page Features:
-  1. Selecting a squirrel from the dropdown list populates detailed information about that squirrel and marks the map with the site where the squirrel was spotted
-  2. Donut chart features a breakdown of primary fur color types
-  3. Bar chart compares squirrel based on age group and time of day
+  1. Selecting a squirrel from the dropdown list populates detailed information about that squirrel and marks the map with the site where the squirrel was spotted<br>
+  2. Donut chart features a breakdown of primary fur color types<br>
+  3. Bar chart compares squirrel based on age group and time of day<br>
   4. Button for ---
