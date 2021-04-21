@@ -30,7 +30,7 @@ Extra JS Library: TBA
   2. Obtain an API Key for Mapbox (https://docs.mylistingtheme.com/article/how-to-generate-a-mapbox-api-key/)
   
 <h4>Steps to launch:</h4>
-  1. Use squirrel_census_dataframes.ipynb to convert data from csv to database tables inserted in to the squirells_census PostgreSQL database<br>
+  1. Use squirrel_census_dataframes.ipynb to convert data from csv to database tables inserted in to the squirel_census PostgreSQL database<br>
   2. Use Visual Studio Code: <br>
         a. Add PostgreSQL squirrel_census database username and password to config/config.py<br>
         b. Add Mapbox API key to js/config.js<br>
