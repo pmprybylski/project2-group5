@@ -15,7 +15,7 @@ Responsibilities:
 * CSS/HTML: Pamela
 Note: as tasks are finished, others will float to help.
 
-Extra JS Library: TBA
+Extra JS Library: Chart.js
 
 
 
@@ -34,10 +34,12 @@ Extra JS Library: TBA
 <h4>Steps to launch:</h4>
   1. Use squirrel_census_dataframes.ipynb to convert data from csv to database tables inserted in to the squirel_census PostgreSQL database<br>
   2. Use Visual Studio Code: <br>
-     * Add PostgreSQL squirrel_census database username and password to config/config.py<br>
-     * Add Mapbox API key to js/config.js<br>
-     * Run flask app in app.py to start local server <br>
-     * Use python -m http.server to open the project in an Integrated Terminal <br>
+  <ul>	
+     <li>Add PostgreSQL squirrel_census database username and password to config/config.py</li>
+     <li>Add Mapbox API key to js/config.js</li>
+     <li>Run flask app in app.py to start local server</li>
+     <li>Use python -m http.server to open the project in an Integrated Terminal</li>
+  <ul/>
   3. Open http://localhost:8000/ to view the website
   
 <h4>Page Features:</h4>
