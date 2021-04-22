@@ -47,7 +47,7 @@ Extra JS Library: TBA
   4. Use the button in the top left to generate a new fun fact about squirrels
  
 <h4>Acknowledgements and thanks to:<h4>
-  The Squirrel Census (https://thesquirrelcensus.com/)
+  The Squirrel Census [click me] (https://thesquirrelcensus.com/)
 	Start Bootstrap/SB-Admin (https://startbootstrap.com/template/sb-admin)
 	Icons 8 (https://icons8.com)
 
