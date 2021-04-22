@@ -56,4 +56,24 @@ Extra JS Library: Chart.js
 	Start Bootstrap/SB-Admin (https://startbootstrap.com/template/sb-admin)<br>
 	Icons 8 (https://icons8.com)
 
-  
+  <ol>
+    <li>Choose which type of game you want to play</li>
+    <li>Press the spacebar to start the game
+        <ul>
+            <li>Controls for single player mode:
+                <ul>
+                    <li>W and S</li>
+                    <li>&uarr; and &darr;</li>
+                    <li>A and Z</li>
+                    <li>' (apostrophe) and / (forward slash)</li>
+                </ul>
+            </li>
+            <li>Controls for double player mode:
+                <ul>
+                    <li>The right player uses A and Z</li>
+                    <li>The left player uses ' and /</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ol
