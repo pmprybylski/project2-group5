@@ -34,7 +34,7 @@ Extra JS Library: TBA
 <h4>Steps to launch:</h4>
   1. Use squirrel_census_dataframes.ipynb to convert data from csv to database tables inserted in to the squirel_census PostgreSQL database<br>
   2. Use Visual Studio Code: <br>
-        <p style="text-indent: 25px;">a. Add PostgreSQL squirrel_census database username and password to config/config.py<br><p/>
+        * Add PostgreSQL squirrel_census database username and password to config/config.py<br>
         b. Add Mapbox API key to js/config.js<br>
         c. Run flask app in app.py to start local server <br>
         d. Use python -m http.server to open the project in an Integrated Terminal <br>
