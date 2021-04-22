@@ -37,13 +37,13 @@ Extra JS Library: Chart.js
   	<li>Use Visual Studio Code:</li>
 </ol>
 
-	     - Add PostgreSQL squirrel_census database username and password to config/config.py
-	     - Add Mapbox API key to js/config.js
-	     - Run flask app in app.py to start local server
-	     - Use python -m http.server to open the project in an Integrated Terminal
+- Add PostgreSQL squirrel_census database username and password to config/config.py
+- Add Mapbox API key to js/config.js
+- Run flask app in app.py to start local server
+- Use python -m http.server to open the project in an Integrated Terminal
+
 	     
   3. Open http://localhost:8000/ to view the website</li>
-
 
   
 <h4>Page Features:</h4>
