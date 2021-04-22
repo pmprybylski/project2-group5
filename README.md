@@ -34,13 +34,14 @@ Extra JS Library: Chart.js
 <h4>Steps to launch:</h4>
   1. Use squirrel_census_dataframes.ipynb to convert data from csv to database tables inserted in to the squirel_census PostgreSQL database<br>
   2. Use Visual Studio Code: <br>
+  3. Open http://localhost:8000/ to view the website
 	  <ul>	
 	     <li>Add PostgreSQL squirrel_census database username and password to config/config.py</li>
 	     <li>Add Mapbox API key to js/config.js</li>
 	     <li>Run flask app in app.py to start local server</li>
 	     <li>Use python -m http.server to open the project in an Integrated Terminal</li>
 	  <ul/><br>
-  3. Open http://localhost:8000/ to view the website
+
   
 <h4>Page Features:</h4>
   1. Selecting a squirrel from the dropdown list populates detailed information about that squirrel and marks the map with the site where the squirrel was spotted<br>
