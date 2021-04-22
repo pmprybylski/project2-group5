@@ -42,7 +42,7 @@ Extra JS Library: Chart.js
 	     <li>Run flask app in app.py to start local server
 	     <li>Use python -m http.server to open the project in an Integrated Terminal
 	     
-  <li>Open http://localhost:8000/ to view the website</li>
+  3. Open http://localhost:8000/ to view the website</li>
 
 
   
