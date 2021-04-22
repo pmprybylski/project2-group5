@@ -28,8 +28,8 @@ Extra JS Library: Chart.js
 
 
 <h4>Requirements:</h4>
-  1. Download and install PostgreSQL, create a database 'squirrel_census' (retain database username and password for later step)<br>
-  2. Obtain an API Key for Mapbox (https://docs.mylistingtheme.com/article/how-to-generate-a-mapbox-api-key/)
+ * Download and install PostgreSQL, create a database 'squirrel_census' (retain database username and password for later step)<br>
+ * Obtain an API Key for Mapbox (https://docs.mylistingtheme.com/article/how-to-generate-a-mapbox-api-key/)
   
 <h4>Steps to launch:</h4>
 * Use squirrel_census_dataframes.ipynb to convert data from csv to database tables inserted in to the squirel_census PostgreSQL database<br>
