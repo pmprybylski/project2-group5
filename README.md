@@ -51,9 +51,4 @@ Extra JS Library: TBA
 	Start Bootstrap/SB-Admin (https://startbootstrap.com/template/sb-admin)
 	Icons 8 (https://icons8.com)
 
-  /**
- - parameters:
-   - cubes: The cubes available for allocation
-   - people: The people that require cubes
- */
-
+  
