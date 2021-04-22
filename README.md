@@ -23,7 +23,9 @@ Extra JS Library: TBA
 
 <h1>Preview</h1>
 
-![image](https://user-images.githubusercontent.com/73491575/115479387-4f660b80-a216-11eb-80f7-4362442fa913.png)
+![image](https://user-images.githubusercontent.com/73491575/115639418-86095800-a2e2-11eb-8170-fe8f82f5e772.png)
+
+
 
 <h4>Requirements:</h4>
   1. Download and install PostgreSQL, create a database 'squirrel_census' (retain database username and password for later step)<br>
