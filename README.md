@@ -32,16 +32,17 @@ Extra JS Library: Chart.js
   2. Obtain an API Key for Mapbox (https://docs.mylistingtheme.com/article/how-to-generate-a-mapbox-api-key/)
   
 <h4>Steps to launch:</h4>
-  1. Use squirrel_census_dataframes.ipynb to convert data from csv to database tables inserted in to the squirel_census PostgreSQL database<br>
-  2. Use Visual Studio Code: <br>
+  <ol>
+  	<li>Use squirrel_census_dataframes.ipynb to convert data from csv to database tables inserted in to the squirel_census PostgreSQL database</li>
+  	<li>Use Visual Studio Code:</li>
   	  <ul>	
 	     <li>Add PostgreSQL squirrel_census database username and password to config/config.py</li>
 	     <li>Add Mapbox API key to js/config.js</li>
 	     <li>Run flask app in app.py to start local server</li>
 	     <li>Use python -m http.server to open the project in an Integrated Terminal</li>
-	  <ul/><br>
-  3. Open http://localhost:8000/ to view the website
-
+	  <ul/>
+	<li>Open http://localhost:8000/ to view the website</li>
+  </ol>
 
   
 <h4>Page Features:</h4>
