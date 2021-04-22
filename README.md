@@ -32,24 +32,19 @@ Extra JS Library: Chart.js
   2. Obtain an API Key for Mapbox (https://docs.mylistingtheme.com/article/how-to-generate-a-mapbox-api-key/)
   
 <h4>Steps to launch:</h4>
-<ol>
-  	<li>Use squirrel_census_dataframes.ipynb to convert data from csv to database tables inserted in to the squirel_census PostgreSQL database</li>
-  	<li>Use Visual Studio Code:</li>
-</ol>
-
-* Add PostgreSQL squirrel_census database username and password to config/config.py
-* Add Mapbox API key to js/config.js
-* Run flask app in app.py to start local server
-* Use python -m http.server to open the project in an Integrated Terminal
-	     
-  3. Open http://localhost:8000/ to view the website</li>
+* Use squirrel_census_dataframes.ipynb to convert data from csv to database tables inserted in to the squirel_census PostgreSQL database<br>
+* Add PostgreSQL squirrel_census database username and password to config/config.py in Visual Studio Code<br>
+* Add Mapbox API key to js/config.js in Visual Studio Code<br>
+* Run flask app in app.py to start local server in Visual Studio Code<br>
+* Use python -m http.server to open the project in an Integrated Terminal in Visual Studio Code<br>
+* Open http://localhost:8000 to view the website
 
   
 <h4>Page Features:</h4>
-  1. Selecting a squirrel from the dropdown list populates detailed information about that squirrel and marks the map with the site where the squirrel was spotted<br>
-  2. Donut chart features a breakdown of primary fur color types<br>
-  3. Bar chart compares squirrel based on age group and time of day<br>
-  4. Use the button in the top left to generate a new fun fact about squirrels
+  * Selecting a squirrel from the dropdown list populates detailed information about that squirrel and marks the map with the site where the squirrel was spotted<br>
+  * Donut chart features a breakdown of primary fur color types<br>
+  * Bar chart compares squirrel based on age group and time of day<br>
+  * Use the button in the top left to generate a new fun fact about squirrels
  
 <h4>Acknowledgements and thanks to:<h4>
  	The Squirrel Census (https://thesquirrelcensus.com/)<br>
