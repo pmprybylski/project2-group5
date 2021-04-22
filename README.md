@@ -44,4 +44,4 @@ Extra JS Library: TBA
   1. Selecting a squirrel from the dropdown list populates detailed information about that squirrel and marks the map with the site where the squirrel was spotted<br>
   2. Donut chart features a breakdown of primary fur color types<br>
   3. Bar chart compares squirrel based on age group and time of day<br>
-  4. Button for ---
+  4. Use the button in the top left to generate a new fun fact about squirrels
